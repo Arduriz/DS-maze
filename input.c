@@ -12,27 +12,27 @@ void main() {
 
     FILE* file_read = fopen("input.txt", "r");//fopen이 반환하는 파일 위치를 받을 포인터 변수 file_read 선언
 
-    for (int i = 0; i < MAZE_SIZE-1; i++){
-        for (int j = 0; j < MAZE_SIZE-1; j++) {
+    for (int i = 0; i < MAZE_SIZE - 1; i++) {
+        for (int j = 0; j < MAZE_SIZE - 1; j++) {
             fscanf(file_read, "%s", &maze[i][j]);
         }
     }
 
     file_read = fopen("output.txt", "w");
-    for (int r = 0; r < MAZE_SIZE-1; r++)
+    for (int r = 0; r < MAZE_SIZE - 1; r++)
     {
-        for (int c = 0; c < MAZE_SIZE-1; c++)
+        for (int c = 0; c < MAZE_SIZE - 1; c++)
         {
             if (maze[r][c] == '1')
-                fprintf(file_read, "1");
+                fprintf(file_read, "■");
             else if (maze[r][c] == '0')
-                fprintf(file_read, "0");
+                fprintf(file_read, "□");
             else if (maze[r][c] == 'E')
-                fprintf(file_read, "E");
+                fprintf(file_read, "EE");//특수문자와 간격을 맞추기 위해 E 두 번 사용
             else if (maze[r][c] == '.')
                 fprintf(file_read, ".");
             else if (maze[r][c] == 'X')
-                fprintf(file_read, "X");
+                fprintf(file_read, "X ");
             else
                 fprintf(file_read, "N");
         }
