@@ -7,11 +7,6 @@
 
 int i, j = 0;//지역변수 초기화에 에러가 걸려서 아예 맨처음에 선언과 초기화
 
-typedef struct {
-    short r;
-    short c;
-}
-
 void main() {
     char maze[MAZE_SIZE][MAZE_SIZE];//파일에서 읽어들인 문자열을 저장하기 위한 배열
 
