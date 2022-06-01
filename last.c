@@ -106,8 +106,6 @@ int main(void)
         char* ptr = strtok(buf, " ");
         while (ptr != NULL) {
             maze[i][j] = *ptr;
-            printf("%s\n", ptr);
-            printf("i: %d, j: %d\n", i, j);
             ptr = strtok(NULL, " ");
             j++;
         }
@@ -121,15 +119,15 @@ int main(void)
         for (int c = 0; c < MAZE_SIZE; c++)
         {
             if (maze[r][c] == '1')
-                fprintf(fp, "■(%d %d)", r, c);
+                fprintf(fp, "■");
             else if (maze[r][c] == '0')
-                fprintf(fp, "□(%d %d)", r, c);
+                fprintf(fp, "□");
             else if (maze[r][c] == 'E')
-                fprintf(fp, "EE(%d %d)", r, c);//특수문자와 간격을 맞추기 위해 E 두 번 사용
+                fprintf(fp, "EE");//특수문자와 간격을 맞추기 위해 E 두 번 사용
             else if (maze[r][c] == '.')
-                fprintf(fp, "☆(%d %d)", r, c);
+                fprintf(fp, "☆");
             else if (maze[r][c] == 'X')
-                fprintf(fp, "XX(%d %d)", r, c);
+                fprintf(fp, "XX");
             else
                 fprintf(fp, " ");
         }
@@ -171,15 +169,15 @@ int main(void)
         for (int c = 0; c < MAZE_SIZE; c++)
         {
             if (maze[r][c] == '1')
-                fprintf(fp, "■(%d %d)", r, c);
+                fprintf(fp, "■");
             else if (maze[r][c] == '0')
-                fprintf(fp, "□(%d %d)", r, c);
+                fprintf(fp, "□");
             else if (maze[r][c] == 'E')
-                fprintf(fp, "EE(%d %d)", r, c);//특수문자와 간격을 맞추기 위해 E 두 번 사용
+                fprintf(fp, "EE");//특수문자와 간격을 맞추기 위해 E 두 번 사용
             else if (maze[r][c] == '.')
-                fprintf(fp, "☆(%d %d)", r, c);
+                fprintf(fp, "☆");
             else if (maze[r][c] == 'X')
-                fprintf(fp, "XX(%d %d)", r, c);
+                fprintf(fp, "XX");
             else
                 fprintf(fp, " ");
         }
